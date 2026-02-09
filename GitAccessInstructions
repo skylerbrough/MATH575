@@ -1,0 +1,33 @@
+This file contains information on how to use and access info in the repo for new github users. 
+
+This assumes that you are user anaconda and jupyter lab
+
+One-time git setup:
+
+1. Make sure git is installed. Use this command in anaconda. Use the second command to verify it installed.
+    conda install git
+    git --version
+2. Add your git information from your github account & check that it updated correctly:
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@example.com"
+    git config --list
+
+Project-specific setup: (only needs to be done once for this class)
+1. From within whatever folder you're using for this class, use this code to clone a copy of the repo from github. Change the file name at the end to whatever you want the folder to be called
+    git clone https://github.com/skylerbrough/MATH575.git MATH575_repo
+
+Every day access (needs to be done everytime you want to work on this project):
+1. Navigate to your new folder that you cloned (make sure the name matches your name for it)
+    cd MATH575_repo
+2. Launch jupyter lab from within this directory
+    jupyter lab
+3. In jupyter lab, you should see a bunch of tab, one of which is a command line. Within that command line:
+    git pull
+4. This pulls all updates from the repo. You can now see any files and all changes made. You can now free to make edits, write code, add markdown cells, whatever you like (although be careful not to overwrite others' work)
+5. Make sure to save whatever notebook you're working in often
+6. When you're done for now, save your notebook, then go back to the command line and add all of your changes to github with:
+    git add .
+7. Add a message to communicate what changes you made with:
+    git commit -m "This is my message talking about the changes I made."
+8. To push all of this to the repo use:
+    git push
