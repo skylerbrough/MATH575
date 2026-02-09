@@ -1,0 +1,28 @@
+This file walks you through how to store the data locally (it can't legally be uploaded into Kaggle, and is too big anyway), and set up your Kaggle API so that the data can be referenced
+
+1. First install the kaggle package. From whatever environment you use for this class in anaconda:
+    pip install kaggle
+
+2. From inside the project repo folder in anaconda, make a folder called data to export the data into:
+    cd MATH575_repo #or whatever your repo folder is named
+    mkdir data
+
+3. Get a Kaggle API token
+  a. Go to kaggle.com
+  b. Register for an account or login
+  c. Go to settings
+  d. Under the account tag, under API tokens, click Generate New Token
+  e. Give it a name like 'MATH575'
+  f. Copy the API token it gives you (the top one)
+
+4. Make a kaggle.json file in a .kaggle folder
+  a. Go to C:\Users\<YourUsername>\ in your files
+  b. Create a folder called .kaggle
+  c. Inside this folder create a .json file (this can be done with notepad) called kaggle.json
+  d. Type this in the json:
+      {
+        "username": "YOUR_KAGGLE_USERNAME",
+        "key": "YOUR_KAGGLE_KEY"
+      }
+
+5. When you run the first block of code in the python notebook, it will generate the data locally in the data folder. This took about 10 minutes for me, so be patient. Once that's done, the code won't rerun so this is one-time setup.
